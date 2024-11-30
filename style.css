@@ -1,0 +1,324 @@
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #fefefe;
+  font-weight: bold;
+}
+h2 {
+  color: #b5b563;
+  font-weight: bold;
+  justify-content: center;
+}
+p {
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #2b3a4d;
+}
+
+/* Navbar */
+nav {
+  background-color: #b5b563;
+  padding: 10px 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+.chatgpt-reminder {
+  background-color: #b5b563; /* Light gray background */
+  color: #333; /* Dark text for contrast */
+  text-align: center; /* Center the text */
+  padding: 10px 0; /* Top and bottom padding */
+  font-size: 18px; /* Adjust font size as needed */
+  border-bottom: 2px solid #b5b563; /* Optional: border for a subtle separation */
+  margin-bottom: 20px; /* Space below the reminder */
+}
+
+/* Hero Section */
+#hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+#hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+#hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 2;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#hero p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* Introduction */
+#intro {
+  background-color: #3c5e48;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Timeline */
+#timeline {
+  padding: 20px;
+  background-color: #b5b563;
+  overflow-x: auto;
+}
+
+#timeline h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column; /* Keep items stacked */
+  align-items: center;
+  border-left: 2px solid #3c5e48;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  position: relative;
+  padding-right: 20px;
+}
+
+.timeline-item::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #3c5e48;
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+.timeline-item span {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.timeline-item p {
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Orchid Item */
+section[id^="orchid"] {
+  padding: 20px;
+  background-color: #3c5e48;
+  margin-bottom: 0px;
+}
+
+/* General Styling for Orchid Sections */
+section[id^="orchid"] h2 {
+  text-align: center;
+  margin: 0 auto; /* Center the header horizontally */
+  display: block;
+  font-size: 1rem; /* Make sure the header takes up its full width */
+}
+
+/* Item Image */
+.item-image {
+  width: 100%; /* Full width for mobile and tablet */
+  margin-bottom: 15px; /* Space between the main image and other sections */
+  text-align: center; /* Center the main image */
+}
+
+.item-image img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 800px; /* Set a maximum width for large screens */
+}
+
+/* Item Images Container */
+.item-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.item-images img {
+  width: 100%; /* Full width for mobile and tablet */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 300px; /* Limit max width for larger screens */
+}
+
+.image-placeholder {
+  width: 150px; /* Adjust the size as needed */
+  height: 150px; /* Same as width to keep it square */
+  background-color: rgba(200, 200, 200, 0.2); /* Light gray with transparency */
+  border: 2px solid #bbb; /* Thinner border */
+  border-radius: 4px; /* Optional: adds rounded corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666; /* Subtle text color */
+  font-size: 12px; /* Smaller font size */
+  font-style: italic; /* Optional: makes the text look subtle */
+  text-align: center;
+  margin: 20px 0; /* Adds some spacing around the placeholder */
+}
+
+/* Footer */
+footer {
+  background-color: #2b3a4d;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Media Query for Tablets (768px and up) */
+@media (min-width: 768px) {
+  #hero h1 {
+    font-size: 4rem;
+  }
+
+  #hero p {
+    font-size: 1.8rem;
+  }
+
+  #intro {
+    padding: 40px;
+  }
+
+  .timeline-item {
+    flex-direction: row; /* Change to row */
+    align-items: flex-start;
+    padding-left: 40px; /* Adjust padding */
+    border-left: 4px solid #3c5e48;
+  }
+
+  .timeline-item::before {
+    display: none; /* Hide the circle on larger screens */
+  }
+
+  .timeline-item span {
+    font-size: 1.5rem;
+    margin-right: 20px;
+    text-align: left; /* Align text to the left */
+  }
+
+  .timeline-item p {
+    text-align: left;
+  }
+}
+
+section[id^="orchid"] {
+  padding: 40px 20px;
+}
+
+section[id^="orchid"] h2 {
+  font-size: 2.5rem; /* Adjust font size for larger screens */
+}
+
+.item-image img {
+  max-width: 600px; /* Adjust max width for tablets */
+}
+
+.item-images img {
+  max-width: 45%; /* Adjust image size for tablet view */
+}
+
+/* Media Query for Desktops (1024px and up) */
+@media (min-width: 1024px) {
+  #hero h1 {
+    font-size: 4rem;
+  }
+
+  #hero p {
+    font-size: 1.5rem;
+  }
+
+  #intro {
+    padding: 40px;
+  }
+
+  #timeline {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .timeline-item {
+    flex-direction: column; /* Align items in a column to match the phone view */
+    align-items: center;
+    padding-left: 20px; /* Maintain padding */
+    border-left: 2px solid #3c5e48; /* Keep line width consistent */
+    margin-bottom: 20px; /* Space between items */
+  }
+
+  .timeline-item::before {
+    display: block; /* Show the dot */
+    left: -6px; /* Center the dot */
+  }
+
+  .timeline-item span {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .timeline-item p {
+    text-align: center;
+  }
+
+  section[id^="orchid"] {
+    padding: 40px 30px; /* More padding for desktop view */
+  }
+  section[id^="orchid"] h2 {
+    font-size: 2.8rem; /* Further adjust font size for desktop screens */
+  }
+
+  .item-image img {
+    max-width: 800px; /* Adjust max width for desktops */
+  }
+
+  .item-images img {
+    max-width: 30%; /* Larger images for desktop */
+  }
+}
